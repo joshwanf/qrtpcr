@@ -54,7 +54,7 @@ They depend on the following variables that match experiment details:
 Variable            | Description
 ---                 | ---
 metafile            | a path to the tsv meta file
-datafile            | character string or vector containing a path to the data files
+datafile            | character string or vector containing a path to the data files. The data can be spread across multiple plates, but if *GAPDH* is repeated on each plate, it will combine all values and treat them as technical replicates.
 control             | character vector that matches the name of the control sample. This can be a single sample name (`Sample 1`) or two biological conditions (`c("Normal media", "Vehicle")`). Default value is `Sample 1`.
 graph_group         | character string of a column name in `meta` that will be used for groups when plotting. Default value is `NULL`.
 independent_x_calc  | character string of a column name in `meta` that will be used to calculate conditions independently. Default value is `NULL`.
