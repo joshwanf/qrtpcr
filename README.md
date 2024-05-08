@@ -10,7 +10,8 @@ Analyze qRT-PCR data using delta-delta Ct method in R
 packages <- c(
     "tidyverse",
     "readxl",
-    "openxlsx"
+    "openxlsx",
+    "crayon"
 )
 
 tryCatch(
