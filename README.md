@@ -78,13 +78,15 @@ analyzed_data <- fund_pcr_fc(
     meta = meta,
     control = control,
     graph_group = graph_group
+    # Can include other parameters here if they are changed
 )
 
 pcr_plot <- plot_pcr(
     data = analyzed_data,
     meta = meta,
     control = control,
-    graph_group = graph_group,
+    graph_group = graph_group
+    # Can include other parameters here if they are changed
 )
 walk(pcr_plot, ~ print(.x))
 
