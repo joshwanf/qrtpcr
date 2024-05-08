@@ -291,7 +291,7 @@ plot_pcr <- function(data,
                      graph_group = NULL,
                      independent_x_calc = NULL,
                      housekeeping = "GAPDH",
-                     graph_cols = 3, 
+                     graph_cols = 2, 
                      debug = F) {
   data <- data %>%
     select(-matches(c("dCt group", "dCt housekeeping", "ddCt group", "ddCt control")))
