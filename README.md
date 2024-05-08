@@ -70,7 +70,7 @@ control <- c("Normal media", "Vehicle")
 graph_group <- "Growth media"
 source("qrtpcr.R")
 
-meta <- read_tsv(path = metafile, col_types = cols()) %>%
+meta <- read_tsv(file = metafile, col_types = cols()) %>%
     mutate(across(everything(), as_factor))
 
 analyzed_data <- find_pcr_fc(
