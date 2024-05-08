@@ -6,7 +6,7 @@ Analyze qRT-PCR data using delta-delta Ct method in R
 
 ## Load packages
 
-```{r}
+```r
 packages <- c(
     "tidyverse",
     "readxl",
@@ -37,7 +37,7 @@ This is a tab-separated file containing a list of samples and conditions.
 The samples column name (typically `Sample Name`) must match the column in the exported data file.
 The file can have additional columns not used in the analysis but may contain extra information.
 
-```{r}
+```r
 meta <- tibble(
     `Sample Name` = paste("Sample", 1:12),
     `Growth media` = rep(c("Normal media", "New media"), each = 6),
@@ -61,7 +61,7 @@ independent_x_calc  | character string of a column name in `meta` that will be u
 housekeeping        | character string of the housekeeping gene used (case sensitive). Default value is `GAPDH`.
 output_file         | character string for the output file
 
-```{r}
+```r
 datafiles <- c(
     "data plate 1.xlsx",
     "data plate 2.xlsx"
