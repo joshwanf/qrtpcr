@@ -73,7 +73,7 @@ source("qrtpcr.R")
 meta <- read_tsv(path = metafile, col_types = cols()) %>%
     mutate(across(everything(), as_factor))
 
-analyzed_data <- fund_pcr_fc(
+analyzed_data <- find_pcr_fc(
     datafile = datafiles,
     meta = meta,
     control = control,
