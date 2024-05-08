@@ -293,6 +293,8 @@ plot_pcr <- function(data,
                      housekeeping = "GAPDH",
                      graph_cols = 3, 
                      debug = F) {
+  data <- data %>%
+    select(-matches(c("dCt group", "dCt housekeeping", "ddCt group", "ddCt control")))
   if (debug) message("********** Processing data to plot graph.")
   plot_vars <- c("plot_vars")
   # Set graph variables
