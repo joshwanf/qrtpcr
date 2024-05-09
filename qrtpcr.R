@@ -99,6 +99,9 @@ calc_dct <- function(data, target, housekeeping, grouping, n_samples, debug) {
   n_housekeeping <- length(data[["Ct mean"]][data[[target]] == housekeeping])
   n_targets <-  n_samples / n_housekeeping
   housekeeping_ct <- na.omit(data[["Ct mean"]][data[[target]] == housekeeping])
+  if (length(housekeeping_ct) > 1) {
+    housekeeping_ct <- mean(housekeeping_ct)
+  }
   dct <- tibble(dCt = data[["Ct mean"]] - housekeeping_ct)
   if (debug) {
     dct <- dct %>% mutate(
